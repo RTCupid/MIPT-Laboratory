@@ -1,0 +1,104 @@
+\chapter{Приложение}
+\label{ch:appendix}
+
+\section {Приложение А. Вывод формулы для нахождения показателя адиабаты}
+
+Для описания состояния газа можно использовать модель идеального
+газа. Рассмотрим изобарическое расширение воздуха. Для этого запишем уравнение теплового баланса для имеющейся во времени массы газа: $m = \frac{p_0V_0}{RT}\mu$:
+
+\begin{equation}
+    c_p m \ dT = -\alpha (T - T_0) dt, 
+\end{equation}
+
+где $c_v$ — удельная теплоёмкость воздуха при постоянном давлении, $a$ — положительный постоянный коэффициент, характеризующий теплообмен, $V$ — объем сосуда.
+
+Перепишем уравнение в виде:
+
+\begin{equation}
+    \frac{dT}{T(T - T_0)} = -\frac{\alpha dt}{c_p \frac{p_0V_0}{R}\mu} 
+\end{equation}
+
+После преобразования:
+
+\begin{equation}
+    \frac{1}{T_0} \left(\frac{1}{T} -\frac{1}{T - T_0} \right)dT = -\frac{\alpha dt}{c_p m_0T_0} 
+\end{equation}
+
+После сокращения на $T_0 $ выполним интегрирование:
+\begin{equation}
+    \int \frac{1}{T_0} \left(\frac{1}{T} -\frac{1}{T - T_0} \right)dT = -\frac{\alpha}{c_p m_0T_0} \int dt
+\end{equation}
+
+\begin{equation}
+    \ln \left( \frac{T_2 \cdot \Delta T_1}{T_1 \cdot \Delta T_2} \right) =  \frac{a}{c_p} \tau
+\end{equation}
+
+Для адиабатического расширения справедливо соотношение $T^{\gamma} = const \cdot p^{\gamma-1}$. После взятия логарифмических производных, получим:
+
+\begin{equation}
+    \gamma \frac{dT}{T} = (\gamma - 1) \frac{dp}{p}
+\end{equation}
+
+Переходя к конечным приращениям:
+
+\begin{equation}
+    \frac{\Delta T}{T} = \frac{\gamma - 1}{\gamma} \frac{\Delta p_1}{p_0}
+\end{equation}
+
+При изохорическом нагреве выполняется: $\frac{p}{T} = \text{const}$. Возьмём от этого выражения логарифмическую производную: $\frac{dp}{p} = \frac{dT}{T}$. В конечных приращениях $\frac{\Delta T_2}{T_2} = \frac{\Delta p_2}{p_0}$.
+
+После подстановок получаем:
+\begin{equation}
+    \left( \frac{\gamma - 1}{\gamma} \right) \frac{\Delta p_1}{p_0} = \frac{\Delta p_2}{p_0} \exp\left(\frac{\alpha}{c_p m_0}\right)
+\end{equation}
+
+
+Подставляя выражения (1) и (2), получаем:
+
+\begin{equation}
+    \frac{\Delta h_1}{\Delta h_2} = \frac{\gamma}{\gamma - 1} \exp \left( \frac{\alpha}{c_p m_0}  \tau\right) 
+\end{equation}
+
+Следовательно, 
+
+\begin{equation}
+    \ln{\frac{\Delta h_1}{\Delta h_2}} = \ln{\frac{\gamma}{\gamma - 1}} + \left( \frac{\alpha}{c_p m_0}  \tau\right) 
+\end{equation}
+
+\section{Приложение Б. Результаты измерений}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    $\ln(\Delta h_1/\Delta h_2)$ & $\tau$, c \\ 
+    \hline
+    1,69 & 5 \\
+    1,80 & 10 \\ 
+    1,96 & 15 \\
+    2,21 & 20 \\
+    2,09 & 25 \\
+    2,15 & 30 \\
+    2,32 & 35 \\
+    \hline
+    \end{tabular}
+\end{center}
+\begin{center}
+    Таблица 1. Зависимость $\ln(\Delta h_1/\Delta h_2)$ от $\tau$ 
+\end{center}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$\Delta h_1 \pm 0.05$, см & $\Delta h_2 \pm 0.05$, см & $\tau$, с & $\Delta h_1/\Delta h_2$ \\ 
+\hline
+9.20 & 1.70 & 5  & 5.41  \\
+9.10 & 1.50 & 10 & 6.07  \\ 
+9.20 & 1.30 & 15 & 7.08  \\
+9.10 & 1.00 & 20 & 9.10  \\
+8.90 & 1.10 & 25 & 8.09  \\
+9.40 & 1.10 & 30 & 8.55  \\
+9.20 & 0.90 & 35 & 10.22 \\
+\hline
+\end{tabular}
+\begin{center}
+    Таблица 2. Результаты измерений. $\Delta h_1$ - изменение уровня жидкости в жидкостном манометре в течение перегрева и изохорного охлаждения, $\Delta h_2$ - изменение уровня жидкости в жидкостном манометре за цикл адиабатическое расширение - изобарическое нагревание - изохорическое нагревание. $\tau$ - время, в течение которого открыт кран, соединяющий сосуд с окружающей средой во втором цикле.
+\end{center}
